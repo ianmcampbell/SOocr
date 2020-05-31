@@ -9,4 +9,4 @@ License: GPL 3.0
 Encoding: UTF-8
 LazyData: true
 Depends: R (>= 3.5)
-Imports: magick (>= 2.3), clipr (>= 0.7.0), data.table (>= 1.12.9)
+Imports: magick (>= 2.3), tesseract (>= 4.0), clipr (>= 0.7.0), data.table (>= 1.12.9)
