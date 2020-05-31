@@ -1,0 +1,48 @@
+
+# See [How to make a reproducible example](https://stackoverflow.com/questions/5963269/) for more info. 
+
+# Hi , welcome to Stack Overflow. It will be much easier to help if you provide at least a sample of your data with `dput()` or if your data is very large `dput([1:10,])`. You can edit your question and paste the output. You can surround it with three backticks (```) for better formatting. See [How to make a reproducible example](https://stackoverflow.com/questions/5963269/) for more info. 
+
+# Hi , welcome to Stack Overflow. This is a question and answer site which focuses on answering specific programming questions. It is not a tutorial site. That said, some users may choose to answer a question this broad. For the best chance of receiving an answer, you should provide a fully formated sample of your data and some of the code that you have tried thus far to get your desired output. See [How to make a reproducible example](https://stackoverflow.com/questions/5963269/) for more info.
+
+# Hi , welcome to Stack Overflow. This website focuses on *specific* **programing** questions. It seems your question centers more on selection and interpretation of statistical analysis. Therefore, your question is likely more appropriate for [CrossValidated](https://stats.stackexchange.com).
+
+#[Why can't I ask customer service-related questions?](http://meta.stackoverflow.com/a/255746)
+
+read_text_y <- function(...){
+  require(clipr)
+  read.table(text = read_clip(), header=TRUE,...)
+}
+
+read_text_n <- function(...){
+  require(clipr)
+  read.table(text = read_clip(), header=FALSE,...)
+}
+
+image_to_data <- function(url, split = " ",filter = c("","="),firsttocolnames = TRUE){
+  require(magick)
+  require(dplyr)
+  require(data.table)
+  require(stringr)
+  require(rlang)
+  result <- image_read(url) %>%
+    image_convert(colorspace = "gray") %>%
+    image_trim %>%
+    image_ocr %>%
+    str_split("(\n)?\n", simplify = TRUE) %>%
+    str_split(split) %>%
+    lapply(., function(x) {
+      x <- x[!x %in% c("", "=")]
+      as.list(set_names(x, seq_along(x)))
+    }) %>%
+    rbindlist(fill = TRUE)
+  
+    if(firsttocolnames == TRUE) {
+      colnames(result) <- as.character(result[1,])
+      result <- result[-1,]
+    }
+    return(result)
+}
+
+
+

@@ -1,23 +1,23 @@
 {
     "collab_server" : "",
     "contents" : "",
-    "created" : 1590958655894.000,
+    "created" : 1590959024857.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "1133301866",
-    "id" : "5C34829",
+    "hash" : "4116331488",
+    "id" : "E1DA0A07",
     "lastKnownWriteTime" : 1590958653,
     "last_content_update" : 1590958653,
-    "path" : "~/SOocr/R/hello.R",
-    "project_path" : "R/hello.R",
+    "path" : "~/SOocr/NAMESPACE",
+    "project_path" : "NAMESPACE",
     "properties" : {
     },
     "read_only" : false,
     "read_only_alternatives" : [
     ],
-    "relative_order" : 1,
+    "relative_order" : 4,
     "source_on_save" : false,
     "source_window" : "",
-    "type" : "r_source"
+    "type" : "r_namespace"
 }
