@@ -10,3 +10,4 @@ Encoding: UTF-8
 LazyData: true
 Depends: R (>= 3.5)
 Imports: magick (>= 2.3), tesseract (>= 4.0), clipr (>= 0.7.0), data.table (>= 1.12.9)
+RoxygenNote: 7.1.0
